@@ -1,0 +1,24 @@
+---
+- name: Updating packages on systems
+  hosts: servers
+  become: yes  
+
+  tasks:
+    - name: Update all packages to the latest version
+      apt:
+        update_cache: yes  
+        upgrade: yes 
+
+
+    - name: Apply security patches
+      apt:
+        name: "*"
+        state: latest
+        upgrade: security
+
+    - name: Apply any new distribution patches
+      apt:
+        name: "*"
+        state: latest
+        upgrade: dist
+      
