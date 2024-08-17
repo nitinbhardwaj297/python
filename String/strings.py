@@ -37,3 +37,9 @@ print(introduction.strip())
 age = 36
 print(f"my age is {age}")
 
+
+# string formatting
+name = "nitin"
+text = f"my name is {name}"
+print(text)
+
