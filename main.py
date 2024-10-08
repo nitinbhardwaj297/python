@@ -1,8 +1,7 @@
-import mymodule as my
+file_path = "/Users/apple/Desktop/Nitin/Python/basics"
 
-my.sum(5,5)
+file = open("file_path", "a")
 
-# from mymodule import sum
+file.write("this is my appended line")
 
-# sum(5,5)
-
+file.close()
